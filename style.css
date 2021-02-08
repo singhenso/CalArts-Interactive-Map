@@ -92,70 +92,19 @@ li.active a, a:hover, a:active {
   top: 50%;
   transform: translateY(-50%);
 }
-
-.distribution-map {
-  position: relative;
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  margin: 0 auto;
+.distribution-map { position: relative; width: 100%; }
+.distribution-map .map-point .content { -moz-user-select: text; -ms-user-select: text; -webkit-user-select: text; user-select: text; }
+@media all and (max-width: 767px) {
+.distribution-map img { display: none; }
+.distribution-map .map-point { display: block; width: auto; outline: none; text-align: left; background: none; border: none; margin: 0 0 20px 0; padding: 0; cursor: text; color: #e5e5e5; }
+.distribution-map .map-point h1, .distribution-map .map-point h2, .distribution-map .map-point h3, .distribution-map .map-point h4, .distribution-map .map-point h5 { margin: 0; }
 }
-.distribution-map > img {
-  width: 100%;
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-.distribution-map .map-point {
-  cursor: pointer;
-  outline: none;
-  z-index: 0;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
-  transform: translate(-50%, -50%);
-  -moz-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
-  -o-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
-  -webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out, z-index 0.25s ease-in-out;
-  -webkit-transition-delay: 0.25s, 0.25s, 0.25s, 0.25s;
-  transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
-  background: rgba(26, 26, 26, 0.85);
-  border: 5px solid #7fcff7;
-}
-.distribution-map .map-point .content {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  transition: opacity 0.25s ease-in-out;
-  width: 100%;
-  height: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  overflow: overlay;
-}
-.distribution-map .map-point:active, .distribution-map .map-point:hover {
-  margin: 0;
-  padding: 0;
-  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-  opacity: 1;
-  width: 300px;
-  height: 220px;
-  color: #e5e5e5;
-  z-index: 1;
-  transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
-}
-.distribution-map .map-point:active .content, .distribution-map .map-point:hover .content {
-  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-  opacity: 1;
-  -moz-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
-  -o-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
-  -webkit-transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
-  -webkit-transition-delay: 0.25s, 0s, 0s;
-  transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
-  overflow: hidden;
-}
-.distribution-map .map-point:active .content a:hover, .distribution-map .map-point:active .content a:active, .distribution-map .map-point:focus .content a:hover, .distribution-map .map-point:focus .content a:active {
-  color: #afe1fa;
+@media all and (min-width: 768px) {
+.distribution-map { margin: 0 auto 100px auto; }
+.distribution-map img { width: 100%; position: relative; margin: 0; padding: 0; }
+.distribution-map .map-point { outline: none; z-index: 0; position: absolute; width: 40px; height: 40px; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; -moz-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%); -webkit-transform: translate(-50%,-50%); transform: translate(-50%,-50%); -moz-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s; -o-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s; -webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out, z-index 0.25s ease-in-out; -webkit-transition-delay: 0.25s, 0.25s, 0.25s, 0.25s; transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s; background: rgba(26,26,26,0.85); border: 5px solid #458230; }
+.distribution-map .map-point .content { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 0.25s ease-in-out; -o-transition: opacity 0.25s ease-in-out; -webkit-transition: opacity 0.25s ease-in-out; transition: opacity 0.25s ease-in-out; width: 100% !important; height: 100% !important; left: 50% !important; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%) !important; overflow: overlay; z-index: -1; }
+.distribution-map .map-point.active { margin: 0; padding: 0; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; width: 300px; height: 220px; color: #e5e5e5; z-index: 1; -moz-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out; -o-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out; -webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out; transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out; }
+.distribution-map .map-point.active .content { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; -moz-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out; -o-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out; -webkit-transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out, overflow 0.25s ease-in-out; -webkit-transition-delay: 0.25s, 0s, 0s; transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out; overflow: hidden; z-index: auto; }
+.distribution-map .map-point.active .content a:hover, .distribution-map .map-point.active .content a:active { color: #72c157; }
 }
